@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Action[] actions = location.actions;
 
         textView.setText(location.text);
-//        Log.d("loc", location.text);
         for (int i = 0; i < actions.length; i++) {
             Button button = new Button(this);
             button.setText(actions[i].text);
