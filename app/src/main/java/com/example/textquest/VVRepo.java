@@ -1,7 +1,5 @@
 package com.example.textquest;
 
-import android.util.Log;
-
 import java.util.ArrayList;
 
 public class VVRepo implements IRepository {

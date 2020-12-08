@@ -23,7 +23,8 @@
                 android:layout_margin="10dp"
                 android:textSize="40sp"
                 android:layout_gravity="center"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textColor="#000"/>
             <LinearLayout
                 android:id="@+id/linear"
                 android:layout_width="match_parent"

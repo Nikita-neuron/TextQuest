@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -51,13 +50,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Button button = new Button(this);
             button.setText(actions[i].text);
 
-            button.setBackgroundColor(Color.rgb(0, 255, 142));
-            button.setTextSize(30);
+            button.setTextSize(20);
             button.setTextColor(Color.rgb(0, 0, 0));
 
             button.setTag(R.id.action, i);
             button.setOnClickListener(this);
-//            button.setBackgroundResource(R.drawable.button_action);
+            button.setBackgroundResource(R.drawable.button_action);
             linearLayout.addView(button);
         }
     }

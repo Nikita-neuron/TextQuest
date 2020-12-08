@@ -1,6 +1,7 @@
 package com.example.textquest;
 
 import android.content.Context;
+import android.util.Log;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -27,7 +28,7 @@ public class Repo implements IRepository{
 
             for (int i = 0; i < obj.length(); i++) {
                 // получаем локацию
-                JSONObject location = obj.getJSONObject(String.valueOf(i + 1));
+                JSONObject location = obj.getJSONObject(String.valueOf(i));
 
                 // получаем действия
                 JSONObject actionsObj = location.getJSONObject("actions");
@@ -67,6 +68,6 @@ public class Repo implements IRepository{
     }
 
     public Location getLocation(int nLoc) {
-        return locations[nLoc - 1];
+        return locations[nLoc];
     }
 }
