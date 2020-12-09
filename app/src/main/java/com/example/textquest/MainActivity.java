@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private LinearLayout linearLayout;
     private TextView textView;
+    private ScrollView scrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         linearLayout = findViewById(R.id.linear);
         textView = findViewById(R.id.text);
+        scrollView = findViewById(R.id.scroll);
 
         showLocation(game.getCurLocation());
     }
@@ -55,8 +58,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             button.setTag(R.id.action, i);
             button.setOnClickListener(this);
+
             button.setBackgroundResource(R.drawable.button_action);
+            button.setMinWidth(1);
             linearLayout.addView(button);
         }
+        scrollView.scrollTo(0, 0);
     }
 }
