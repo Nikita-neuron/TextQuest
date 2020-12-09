@@ -1,36 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.example.textquest.WinterLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/winter"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:snowCount="10"
+    app:minSize="30"
+    app:maxSize="55"
     tools:context=".MainActivity"
-    android:orientation="vertical"
-    android:background="@drawable/background">
-    <ScrollView
-        android:id="@+id/scroll"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:ignore="ScrollViewCount,UselessParent">
-
-        <LinearLayout
+    android:background="@drawable/snow_background">
+        <ScrollView
+            android:id="@+id/scroll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            tools:ignore="ScrollViewCount,UselessParent">
 
-            <TextView
-                android:id="@+id/text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:textSize="40sp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:textColor="#000"/>
             <LinearLayout
-                android:id="@+id/linear"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"/>
-        </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="40sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#AEB7D6" />
+                <LinearLayout
+                    android:id="@+id/linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+            </LinearLayout>
+        </ScrollView>
+</com.example.textquest.WinterLayout>

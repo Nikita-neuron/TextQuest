@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private LinearLayout linearLayout;
     private TextView textView;
     private ScrollView scrollView;
+    private WinterLayout winter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +29,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         linearLayout = findViewById(R.id.linear);
         textView = findViewById(R.id.text);
         scrollView = findViewById(R.id.scroll);
+        winter = findViewById(R.id.winter);
 
         showLocation(game.getCurLocation());
+        winter.startWinter();
+
     }
 
     @Override
@@ -49,12 +53,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Action[] actions = location.actions;
 
         textView.setText(location.text);
+        textView.setBackgroundColor(Color.argb( 140,0, 0, 0));
         for (int i = 0; i < actions.length; i++) {
             Button button = new Button(this);
             button.setText(actions[i].text);
 
             button.setTextSize(20);
-            button.setTextColor(Color.rgb(0, 0, 0));
+            button.setTextColor(Color.rgb(193, 198, 214));
 
             button.setTag(R.id.action, i);
             button.setOnClickListener(this);
